@@ -37,6 +37,7 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neoyank.vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'rgarver/Kwbd.vim'
@@ -183,7 +184,6 @@ inoremap <expr><C-e>  neocomplete#cancel_popup()
 
 " Unite
 let g:unite_enable_start_insert = 1
-let g:unite_source_history_yank_enable = 1
 noremap <silent> ,f :<C-u>Unite -buffer-name=files -default-action=tabopen file_rec<CR>
 noremap <silent> ,c :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 noremap <silent> ,m :<C-u>Unite -buffer-name=files file_mru<CR>
