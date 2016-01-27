@@ -45,6 +45,7 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'mxw/vim-jsx'
 NeoBundle 'inotom/str2htmlentity'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'will133/vim-dirdiff'
@@ -200,6 +201,9 @@ augroup PrevimSettings
     autocmd!
     autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
+
+" JSX
+let g:jsx_ext_required = 0
 
 " Color
 if !has('gui_macvim')
