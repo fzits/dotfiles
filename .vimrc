@@ -43,6 +43,7 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'rgarver/Kwbd.vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'gabrielelana/vim-markdown'
 NeoBundle 'groenewege/vim-less'
 "NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mxw/vim-jsx'
@@ -201,6 +202,12 @@ augroup PrevimSettings
     autocmd!
     autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
+
+" Markdown
+" スペルチェックOFF（日本語がスペルチェックにひっかかるため）
+let g:markdown_enable_spell_checking = 0
+" 略語の展開をOFF
+let g:markdown_enable_input_abbreviations = 0
 
 " JSX
 let g:jsx_ext_required = 0
