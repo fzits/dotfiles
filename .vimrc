@@ -51,6 +51,7 @@ NeoBundle 'inotom/str2htmlentity'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'will133/vim-dirdiff'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'w0ng/vim-hybrid'
 
 " scripts from http://vim-scripts.org/vim/scripts.html
 NeoBundle 'surround.vim'
@@ -213,9 +214,10 @@ let g:markdown_enable_input_abbreviations = 0
 let g:jsx_ext_required = 0
 
 " Color
-colorscheme desert
+set background=dark
+colorscheme hybrid
 highlight CursorLine cterm=none ctermbg=black
-highlight SpecialKey term=underline ctermfg=darkgray
+highlight SpecialKey term=underline ctermfg=236
 
 "全角スペースのハイライト
 function! IdeographicSpace()
