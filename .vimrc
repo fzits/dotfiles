@@ -213,11 +213,20 @@ let g:markdown_enable_input_abbreviations = 0
 let g:jsx_ext_required = 0
 
 " Color
-if !has('gui_macvim')
-    colorscheme desert
-    highlight SpecialKey term=underline ctermfg=darkgray guifg=#505050
-    highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=#666666
-    highlight WhitespaceEOL ctermbg=red guibg=red
-    match WhitespaceEOL /\s\+$/
-    au BufNewFile,BufRead * match ZenkakuSpace /　/
+colorscheme desert
+highlight CursorLine cterm=none ctermbg=black
+highlight SpecialKey term=underline ctermfg=darkgray
+
+"全角スペースのハイライト
+function! IdeographicSpace()
+    highlight IdeographicSpace ctermbg=red guibg=red
+endfunction
+
+if has('syntax')
+    augroup IdeographicSpace
+        autocmd!
+        autocmd ColorScheme       * call IdeographicSpace()
+        autocmd VimEnter,WinEnter * match IdeographicSpace /　/
+    augroup END
+    call IdeographicSpace()
 endif
