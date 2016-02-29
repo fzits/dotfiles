@@ -133,6 +133,7 @@ vmap <silent> sr :Entity2HtmlString<cr>
 
 " VimFiler
 noremap <LEADER>ff :<C-u>VimFiler<CR>
+noremap <LEADER>fc :<C-u>VimFilerCreate<CR>
 noremap <LEADER>ft :<C-u>VimFilerTab<CR>
 let g:vimfiler_safe_mode_by_default = 0
 let g:vimfiler_as_default_explorer = 1
