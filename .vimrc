@@ -211,7 +211,7 @@ let g:markdown_enable_spell_checking = 0
 let g:markdown_enable_input_abbreviations = 0
 
 " JSX
-let g:jsx_ext_required = 0
+" let g:jsx_ext_required = 0
 
 " Color
 set background=dark
