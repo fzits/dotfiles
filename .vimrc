@@ -192,7 +192,7 @@ inoremap <expr><C-e>  neocomplete#cancel_popup()
 
 " Unite
 let g:unite_enable_start_insert = 1
-noremap <silent> ,f :<C-u>Unite -buffer-name=files -default-action=tabopen file_rec<CR>
+noremap <silent> ,f :<C-u>Unite -buffer-name=files -default-action=open file_rec<CR>
 noremap <silent> ,c :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 noremap <silent> ,m :<C-u>Unite -buffer-name=files file_mru<CR>
 noremap <silent> ,b :<C-u>Unite buffer -buffer-name=files<CR>
