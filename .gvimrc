@@ -16,7 +16,7 @@ if has('gui_macvim')
   set guicursor=a:blinkon0
   set antialias
   set columns=165
-  set lines=72
+  set lines=46
   set linespace=1
 
 endif
