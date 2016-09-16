@@ -184,6 +184,13 @@ noremap <silent> ,g :<C-u>Unite grep<CR>
 noremap <silent> ,h :<C-u>Unite history/yank<CR>
 imap <C-k> <Plug>(neocomplcache_start_unite_complete)
 
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 " Previm
 let g:previm_open_cmd = 'open -a Google\ Chrome'
 
