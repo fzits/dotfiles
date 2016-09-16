@@ -28,6 +28,7 @@ call dein#add('othree/html5.vim')
 call dein#add('hail2u/vim-css3-syntax')
 call dein#add('gabrielelana/vim-markdown')
 call dein#add('groenewege/vim-less')
+call dein#add('fatih/vim-go')
 call dein#add('mxw/vim-jsx')
 call dein#add('inotom/str2htmlentity')
 call dein#add('kannokanno/previm')
@@ -204,6 +205,28 @@ augroup END
 let g:markdown_enable_spell_checking = 0
 " 略語の展開をOFF
 let g:markdown_enable_input_abbreviations = 0
+
+" Go
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>e <Plug>(go-rename)
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 " JSX
 " let g:jsx_ext_required = 0
