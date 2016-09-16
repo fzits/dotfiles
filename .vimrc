@@ -1,73 +1,57 @@
 "vim:set ts=8 sts=2 sw=2 tw=0:
-set nocompatible
-
-" Note: Skip initialization for vim-tiny or vim-small.
-if 0 | endif
-
-if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
-  endif
-
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+"
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
 endif
 
 " Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+set runtimepath+=/Users/t.fujisawa/.cache/dein/repos/github.com/Shougo/dein.vim
 
-" Let NeoBundle manage NeoBundle
 " Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+call dein#begin('/Users/t.fujisawa/.cache/dein')
 
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
+" Let dein manage dein
+" Required:
+call dein#add('Shougo/dein.vim')
 
-" scripts on GitHub repos
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/vimfiler.vim'
-NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neoyank.vim'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'rgarver/Kwbd.vim'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'gabrielelana/vim-markdown'
-NeoBundle 'groenewege/vim-less'
-"NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'mxw/vim-jsx'
-NeoBundle 'inotom/str2htmlentity'
-NeoBundle 'kannokanno/previm'
-NeoBundle 'will133/vim-dirdiff'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'w0ng/vim-hybrid'
+" Add or remove your plugins here:
+call dein#add('Shougo/neocomplete.vim')
+call dein#add('Shougo/vimfiler.vim')
+call dein#add('Shougo/vimshell.vim')
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/neoyank.vim')
+call dein#add('thinca/vim-quickrun')
+call dein#add('mattn/emmet-vim')
+call dein#add('rgarver/Kwbd.vim')
+call dein#add('othree/html5.vim')
+call dein#add('hail2u/vim-css3-syntax')
+call dein#add('gabrielelana/vim-markdown')
+call dein#add('groenewege/vim-less')
+call dein#add('mxw/vim-jsx')
+call dein#add('inotom/str2htmlentity')
+call dein#add('kannokanno/previm')
+call dein#add('will133/vim-dirdiff')
+call dein#add('altercation/vim-colors-solarized')
+call dein#add('w0ng/vim-hybrid')
+call dein#add('junegunn/vim-easy-align')
+call dein#add('tpope/vim-surround')
+call dein#add('schickling/vim-bufonly')
+call dein#add('lisposter/vim-blackboard')
 
-" scripts from http://vim-scripts.org/vim/scripts.html
-NeoBundle 'surround.vim'
-NeoBundle 'Align'
-NeoBundle 'sudo.vim'
-NeoBundle 'BufOnly.vim'
-NeoBundle 'blackboard.vim'
-
-call neobundle#end()
+" Required:
+call dein#end()
 
 " Required:
 filetype plugin indent on
+syntax enable
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
+
+"End dein Scripts-------------------------
 
 syntax on
 
