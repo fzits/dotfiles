@@ -2,56 +2,46 @@
 "
 "dein Scripts-----------------------------
 if &compatible
-  set nocompatible               " Be iMproved
+  set nocompatible
 endif
 
-" Required:
 set runtimepath+=$HOME/.cache/dein/repos/github.com/Shougo/dein.vim
 
-" Required:
-call dein#begin('$HOME/.cache/dein')
+if dein#load_state('$HOME/.cache/dein')
+  call dein#begin('$HOME/.cache/dein')
 
-" Let dein manage dein
-" Required:
-call dein#add('Shougo/dein.vim')
+  call dein#add('Shougo/neocomplete.vim')
+  call dein#add('Shougo/vimfiler.vim')
+  call dein#add('Shougo/vimshell.vim')
+  call dein#add('Shougo/unite.vim')
+  call dein#add('Shougo/neoyank.vim')
+  call dein#add('thinca/vim-quickrun')
+  call dein#add('mattn/emmet-vim')
+  call dein#add('rgarver/Kwbd.vim')
+  call dein#add('othree/html5.vim')
+  call dein#add('nikvdp/ejs-syntax')
+  call dein#add('hail2u/vim-css3-syntax')
+  call dein#add('gabrielelana/vim-markdown')
+  call dein#add('groenewege/vim-less')
+  call dein#add('fatih/vim-go')
+  call dein#add('elixir-lang/vim-elixir')
+  call dein#add('mxw/vim-jsx')
+  call dein#add('inotom/str2htmlentity')
+  call dein#add('kannokanno/previm')
+  call dein#add('will133/vim-dirdiff')
+  call dein#add('altercation/vim-colors-solarized')
+  call dein#add('w0ng/vim-hybrid')
+  call dein#add('junegunn/vim-easy-align')
+  call dein#add('tpope/vim-surround')
+  call dein#add('schickling/vim-bufonly')
+  call dein#add('lisposter/vim-blackboard')
 
-" Add or remove your plugins here:
-call dein#add('Shougo/neocomplete.vim')
-call dein#add('Shougo/vimfiler.vim')
-call dein#add('Shougo/vimshell.vim')
-call dein#add('Shougo/unite.vim')
-call dein#add('Shougo/neoyank.vim')
-call dein#add('thinca/vim-quickrun')
-call dein#add('mattn/emmet-vim')
-call dein#add('rgarver/Kwbd.vim')
-call dein#add('othree/html5.vim')
-call dein#add('nikvdp/ejs-syntax')
-call dein#add('hail2u/vim-css3-syntax')
-call dein#add('gabrielelana/vim-markdown')
-call dein#add('groenewege/vim-less')
-call dein#add('fatih/vim-go')
-call dein#add('mxw/vim-jsx')
-call dein#add('inotom/str2htmlentity')
-call dein#add('kannokanno/previm')
-call dein#add('will133/vim-dirdiff')
-call dein#add('altercation/vim-colors-solarized')
-call dein#add('w0ng/vim-hybrid')
-call dein#add('junegunn/vim-easy-align')
-call dein#add('tpope/vim-surround')
-call dein#add('schickling/vim-bufonly')
-call dein#add('lisposter/vim-blackboard')
+  call dein#end()
+  call dein#save_state()
+endif
 
-" Required:
-call dein#end()
-
-" Required:
 filetype plugin indent on
 syntax enable
-
-" If you want to install not installed plugins on startup.
-"if dein#check_install()
-"  call dein#install()
-"endif
 
 "End dein Scripts-------------------------
 
