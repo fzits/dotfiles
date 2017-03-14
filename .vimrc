@@ -17,6 +17,7 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('Shougo/neoyank.vim')
   call dein#add('thinca/vim-quickrun')
   call dein#add('mattn/emmet-vim')
+  call dein#add('w0rp/ale')
   call dein#add('rgarver/Kwbd.vim')
   call dein#add('othree/html5.vim')
   call dein#add('nikvdp/ejs-syntax')
@@ -81,7 +82,7 @@ set scrolloff=5
 set directory=~/tmp,/var/tmp,/tmp
 set backupdir=~/tmp,/var/tmp,/tmp
 set visualbell t_vb=
-set statusline=%F%m%r%h%w\%=[FT=%Y]\[FF=%{&ff}]\[FENC=%{&fileencoding}]
+set statusline=%F%m%r%h%w\%=\[%{ALEGetStatusLine()}][FT=%Y]\[FF=%{&ff}]\[FENC=%{&fileencoding}]
 set formatoptions+=m
 if has("X11")
   set clipboard=unnamedplus,unnamed
@@ -182,6 +183,21 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" ALE
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+let g:ale_statusline_format = ['E:%d', 'W:%d', 'OK']
+
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+let g:ale_sign_column_always = 1
+
+let g:ale_html_htmlhint_use_global = 1
+let g:ale_linters = {'html': ['htmlhint']}
 
 " Previm
 let g:previm_open_cmd = 'open -a Google\ Chrome'
