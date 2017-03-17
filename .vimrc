@@ -89,7 +89,8 @@ if has("X11")
 else
   set clipboard+=unnamed
 endif
-set noundofile
+set undodir=$HOME/.vim/undodir
+set undofile
 
 noremap j gj
 noremap k gk
