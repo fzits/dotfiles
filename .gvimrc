@@ -15,8 +15,8 @@ if has('gui_macvim')
   set guifontwide=SourceHanSans-Regular:h13
   set guicursor=a:blinkon0
   set antialias
-  set columns=165
-  set lines=46
+  set columns=180
+  set lines=70
   set linespace=1
 
 endif

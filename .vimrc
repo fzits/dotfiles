@@ -91,6 +91,7 @@ else
 endif
 set undodir=$HOME/.vim/undodir
 set undofile
+set splitright
 
 noremap j gj
 noremap k gk
