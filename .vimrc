@@ -101,9 +101,8 @@ noremap <C-tab> :tabnext<CR>
 noremap <C-S-tab> :tabprevious<CR>
 inoremap <C-tab> :tabnext<CR>
 inoremap <C-S-tab> :tabprevious<CR>
-"cmap <C-f> <Right>
-"cmap <C-b> <Left>
-"cnoremap <C-S-f> <C-f>
+cnoremap <C-f> <Right>
+cnoremap <C-b> <Left>
 
 " vimrcをリローダブルにする
 nnoremap <Space>.   :<C-u>edit $MYVIMRC<CR>
