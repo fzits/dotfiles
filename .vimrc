@@ -170,6 +170,7 @@ inoremap <expr><C-e>  neocomplete#cancel_popup()
 
 " Unite
 let g:unite_enable_start_insert = 1
+
 noremap <silent> ,f :<C-u>Unite -buffer-name=files -default-action=open file_rec<CR>
 noremap <silent> ,c :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 noremap <silent> ,m :<C-u>Unite -buffer-name=files file_mru<CR>
@@ -178,6 +179,11 @@ noremap <silent> ,g :<C-u>Unite grep<CR>
 noremap <silent> ,h :<C-u>Unite history/yank<CR>
 imap <C-k> <Plug>(neocomplcache_start_unite_complete)
 
+call unite#custom_source('file,file_rec,file_rec/async,grep',
+      \ 'ignore_pattern', join([
+      \ '\.git/',
+      \ 'node_modules/',
+      \ ], '\|'))
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
