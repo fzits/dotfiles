@@ -52,7 +52,7 @@ set enc=utf-8
 set fileencodings=utf-8,iso-2022-jp,euc-jp,cp932,euc-cn,ucs-2le,ucs-2
 set nofixeol
 set number
-set cursorline
+set nocursorline
 set ignorecase
 set smartcase
 set tabstop=4
@@ -92,10 +92,12 @@ endif
 set undodir=$HOME/.vim/undodir
 set undofile
 set splitright
+set mouse=a
+set ttymouse=xterm2
 
 noremap j gj
 noremap k gk
-noremap tn :tabnew<CR>
+" noremap tn :tabnew<CR>
 nnoremap * *N
 noremap <C-tab> :tabnext<CR>
 noremap <C-S-tab> :tabprevious<CR>
