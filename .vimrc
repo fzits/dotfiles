@@ -92,6 +92,7 @@ endif
 set undodir=$HOME/.vim/undodir
 set undofile
 set splitright
+set hidden
 set mouse=a
 set ttymouse=xterm2
 
