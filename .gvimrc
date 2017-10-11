@@ -11,8 +11,8 @@ if has('gui_macvim')
   set showtabline=2
   set imdisable
 
-  set guifont=SourceCodePro-Regular:h13
-  set guifontwide=SourceHanSans-Regular:h13
+  set guifont=SourceCodePro-Regular:h14
+  set guifontwide=SourceHanSans-Regular:h14
   set guicursor=a:blinkon0
   set antialias
   set columns=180
