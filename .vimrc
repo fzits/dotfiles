@@ -259,6 +259,7 @@ let g:go_highlight_build_constraints = 1
 
 " Color
 set background=dark
+let g:hybrid_custom_term_colors = 1
 colorscheme hybrid
 highlight CursorLine cterm=none ctermbg=black
 highlight SpecialKey term=underline ctermfg=236
