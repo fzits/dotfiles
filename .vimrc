@@ -105,6 +105,10 @@ noremap <C-w>n :tabnext<CR>
 noremap <C-w>p :tabprevious<CR>
 tnoremap <C-w>n <C-w>:tabnext<CR>
 tnoremap <C-w>p <C-w>:tabprevious<CR>
+noremap <C-tab> :tabnext<CR>
+noremap <C-S-tab> :tabprevious<CR>
+tnoremap <C-tab> <C-w>:tabnext<CR>
+tnoremap <C-S-tab> <C-w>:tabprevious<CR>
 cnoremap <C-f> <Right>
 cnoremap <C-b> <Left>
 
