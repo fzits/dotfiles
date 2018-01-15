@@ -2,7 +2,7 @@
 
 set background=dark
 colorscheme hybrid
-set transparency=3
+set transparency=1
 
 set guioptions-=m
 set guioptions-=T
