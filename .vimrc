@@ -211,8 +211,6 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 let g:ale_sign_column_always = 1
 
-let g:ale_html_htmlhint_use_global = 1
-
 let g:ale_linters = {
             \    'html': ['htmlhint'],
             \    'javascript': ['eslint']
