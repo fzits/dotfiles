@@ -1,0 +1,8 @@
+[alias]
+	s = status
+	l = log
+    b = branch
+    d = diff
+    dns = diff --name-status
+    dno = diff --name-only
+	co = checkout
