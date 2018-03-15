@@ -1,3 +1,4 @@
 set main-view = id date author commit-title:graph=yes,refs=yes
 set status-show-untracked-files = yes
-set vertical-split = yes
+set vertical-split = no
+set split-view-height = 70%
