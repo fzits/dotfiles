@@ -15,7 +15,7 @@ if has('gui_macvim')
   set guifontwide=SourceHanCodeJP-Light:h13
   set guicursor=a:blinkon0
   set antialias
-  set columns=180
+  set columns=194
   set lines=70
   set linespace=1
 
