@@ -83,7 +83,8 @@ set scrolloff=5
 set directory=~/tmp,/var/tmp,/tmp
 set backupdir=~/tmp,/var/tmp,/tmp
 set visualbell t_vb=
-set statusline=%F%m%r%h%w\%=\[%{ALEGetStatusLine()}][FT=%Y]\[FF=%{&ff}]\[FENC=%{&fileencoding}]
+"set statusline=%F%m%r%h%w\%=\[%{ALEGetStatusLine()}][FT=%Y]\[FF=%{&ff}]\[FENC=%{&fileencoding}]
+set statusline=%F%m%r%h%w\%=\[FT=%Y]\[FF=%{&ff}]\[FENC=%{&fileencoding}]
 set formatoptions+=m
 if has("X11")
   set clipboard=unnamedplus,unnamed
