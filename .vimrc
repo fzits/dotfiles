@@ -94,6 +94,7 @@ else
 endif
 set undodir=$HOME/.vim/undodir
 set undofile
+set splitbelow
 set splitright
 set hidden
 set mouse=a
@@ -101,7 +102,6 @@ set ttymouse=xterm2
 
 noremap j gj
 noremap k gk
-" noremap tn :tabnew<CR>
 nnoremap * *N
 noremap <C-w>n :tabnext<CR>
 noremap <C-w>p :tabprevious<CR>
@@ -113,6 +113,12 @@ tnoremap <C-tab> <C-w>:tabnext<CR>
 tnoremap <C-S-tab> <C-w>:tabprevious<CR>
 cnoremap <C-f> <Right>
 cnoremap <C-b> <Left>
+
+" Terminal
+noremap <LEADER>tt :terminal++rows=10<CR>
+noremap <LEADER>tc :terminal++curwin<CR>
+noremap <LEADER>tn :tabnew<CR>:terminal++curwin<CR>
+noremap <LEADER>ttig :tabnew<CR>:call term_start(['tig'], {'curwin': v:true, 'term_finish': 'close'})<CR>
 
 " vimrcをリローダブルにする
 nnoremap <Space>.   :<C-u>edit $MYVIMRC<CR>
