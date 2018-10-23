@@ -35,6 +35,7 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('junegunn/vim-easy-align')
   call dein#add('tpope/vim-surround')
   call dein#add('tpope/vim-fugitive')
+  call dein#add('airblade/vim-gitgutter')
   call dein#add('schickling/vim-bufonly')
   call dein#add('lisposter/vim-blackboard')
 
