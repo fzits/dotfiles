@@ -72,8 +72,7 @@ set list
 set listchars=tab:>\ ,extends:<,trail:~
 set wrap
 set laststatus=2
-set cmdheight=2
-set showcmd
+set cmdheight=1
 set title
 set hlsearch
 set incsearch
