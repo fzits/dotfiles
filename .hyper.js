@@ -14,7 +14,7 @@ module.exports = {
     fontSize: 12,
 
     // font family with optional fallbacks
-    fontFamily: 'SourceHanCodeJP-Regular, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: 'SourceHanCodeJP-Regular',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
