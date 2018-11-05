@@ -22,7 +22,7 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('othree/html5.vim')
   call dein#add('nikvdp/ejs-syntax')
   call dein#add('hail2u/vim-css3-syntax')
-  call dein#add('gabrielelana/vim-markdown')
+  call dein#add('plasticboy/vim-markdown')
   call dein#add('groenewege/vim-less')
   call dein#add('fatih/vim-go')
   call dein#add('elixir-lang/vim-elixir')
@@ -238,10 +238,7 @@ augroup PrevimSettings
 augroup END
 
 " Markdown
-" スペルチェックOFF（日本語がスペルチェックにひっかかるため）
-let g:markdown_enable_spell_checking = 0
-" 略語の展開をOFF
-let g:markdown_enable_input_abbreviations = 0
+let g:vim_markdown_frontmatter = 1
 
 " Go
 au FileType go nmap <leader>r <Plug>(go-run)
