@@ -119,7 +119,7 @@ noremap <LEADER>tt :terminal++rows=10<CR>
 noremap <LEADER>tc :terminal++curwin<CR>
 noremap <LEADER>tv :vnew<CR>:terminal++curwin<CR>
 noremap <LEADER>tn :tabnew<CR>:terminal++curwin<CR>
-noremap <LEADER>ttig :tabnew<CR>:call term_start(['tig'], {'curwin': v:true, 'term_finish': 'close'})<CR>
+noremap <LEADER>tig :tabnew<CR>:call term_start(['tig'], {'curwin': v:true, 'term_finish': 'close'})<CR>
 
 " vimrcをリローダブルにする
 nnoremap <Space>.   :<C-u>edit $MYVIMRC<CR>
