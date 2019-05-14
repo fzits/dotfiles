@@ -58,6 +58,7 @@ set number
 set nocursorline
 set ignorecase
 set smartcase
+set shortmess-=S
 set tabstop=4
 set shiftwidth=4
 set expandtab
