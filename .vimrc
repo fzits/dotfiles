@@ -82,6 +82,7 @@ set display+=lastline
 set autoread
 set scrolloff=5
 set eadirection=hor
+set foldmethod=manual
 set directory=~/tmp,/var/tmp,/tmp
 set backupdir=~/tmp,/var/tmp,/tmp
 set visualbell t_vb=
