@@ -130,7 +130,6 @@ module.exports = {
       initialWorkingDirectory: '~/'
     },
 
-    // available only on Hyper 2.1.0-canary.2
     hyperline: {
       plugins: [
         "cpu",
@@ -148,7 +147,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyperline", "hyper-night-owl", "hypercwd"],
+  plugins: ["hyper-night-owl", "hypercwd"],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
