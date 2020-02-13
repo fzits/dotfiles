@@ -28,10 +28,11 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('elixir-lang/vim-elixir')
   call dein#add('mxw/vim-jsx')
   call dein#add('inotom/str2htmlentity')
-  call dein#add('kannokanno/previm')
+  "call dein#add('kannokanno/previm')
   call dein#add('will133/vim-dirdiff')
   call dein#add('altercation/vim-colors-solarized')
   call dein#add('w0ng/vim-hybrid')
+  call dein#add('haishanh/night-owl.vim')
   "call dein#add('cocopon/iceberg.vim')
   call dein#add('junegunn/vim-easy-align')
   call dein#add('tpope/vim-surround')
@@ -242,6 +243,7 @@ augroup END
 
 " Markdown
 let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_folding_disabled = 1
 
 " Go
 au FileType go nmap <leader>r <Plug>(go-run)
@@ -268,12 +270,25 @@ let g:go_highlight_build_constraints = 1
 " JSX
 " let g:jsx_ext_required = 0
 
-" Color
+"ColorScheme 共通
+if (has("termguicolors"))
+ set termguicolors
+endif
 set background=dark
-let g:hybrid_custom_term_colors = 1
-colorscheme hybrid
-highlight CursorLine cterm=none ctermbg=black
-highlight SpecialKey term=underline ctermfg=236
+
+"Hybrid
+"let g:hybrid_custom_term_colors = 1
+"highlight CursorLine cterm=none ctermbg=black
+"highlight SpecialKey term=underline ctermfg=236
+"colorscheme hybrid
+
+"Night Owl 【注意】 Comment にセットされている cterm=italic を none に上書きしないと
+"背景色が表示されてしまう（たぶんターミナルで使っている Migu 2M に italic がないから）
+colorscheme night-owl
+hi Comment cterm=none
+hi javaScriptLineComment cterm=none
+
+"Iceberg
 "colorscheme iceberg
 
 "全角スペースのハイライト
