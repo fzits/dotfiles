@@ -40,6 +40,7 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('airblade/vim-gitgutter')
   call dein#add('schickling/vim-bufonly')
   call dein#add('lisposter/vim-blackboard')
+  call dein#add('vim-jp/vimdoc-ja')
 
   call dein#end()
   call dein#save_state()
@@ -52,6 +53,7 @@ syntax enable
 
 syntax on
 
+set helplang=ja
 set enc=utf-8
 set fileencodings=utf-8,iso-2022-jp,euc-jp,cp932,euc-cn,ucs-2le,ucs-2
 set nofixeol
