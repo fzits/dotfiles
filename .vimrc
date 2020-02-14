@@ -32,8 +32,9 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('will133/vim-dirdiff')
   call dein#add('altercation/vim-colors-solarized')
   call dein#add('w0ng/vim-hybrid')
+  call dein#add('crusoexia/vim-monokai')
   call dein#add('haishanh/night-owl.vim')
-  "call dein#add('cocopon/iceberg.vim')
+  call dein#add('cocopon/iceberg.vim')
   call dein#add('junegunn/vim-easy-align')
   call dein#add('tpope/vim-surround')
   call dein#add('tpope/vim-fugitive')
@@ -280,18 +281,25 @@ set background=dark
 
 "Hybrid
 "let g:hybrid_custom_term_colors = 1
-"highlight CursorLine cterm=none ctermbg=black
-"highlight SpecialKey term=underline ctermfg=236
 "colorscheme hybrid
+"hi CursorLine cterm=none ctermbg=black
+"hi SpecialKey term=underline ctermfg=236
 
 "Night Owl 【注意】 Comment にセットされている cterm=italic を none に上書きしないと
 "背景色が表示されてしまう（たぶんターミナルで使っている Migu 2M に italic がないから）
 colorscheme night-owl
 hi Comment cterm=none
 hi javaScriptLineComment cterm=none
+hi cssClassName cterm=none
+hi cssPseudoClassId cterm=none
+hi cssIdentifier cterm=none
+hi SpecialKey ctermfg=236 guifg=#363636
 
 "Iceberg
 "colorscheme iceberg
+
+"Monokai
+"colorscheme monokai
 
 "全角スペースのハイライト
 function! IdeographicSpace()
