@@ -10,17 +10,22 @@ set runtimepath+=$HOME/.cache/dein/repos/github.com/Shougo/dein.vim
 if dein#load_state('$HOME/.cache/dein')
   call dein#begin('$HOME/.cache/dein')
 
-  call dein#add('Shougo/neocomplete.vim')
   call dein#add('Shougo/vimfiler.vim')
   call dein#add('Shougo/vimshell.vim')
   call dein#add('Shougo/unite.vim')
   call dein#add('Shougo/neoyank.vim')
   call dein#add('thinca/vim-quickrun')
+  call dein#add('prabirshrestha/async.vim')
+  call dein#add('prabirshrestha/vim-lsp')
+  call dein#add('prabirshrestha/asyncomplete.vim')
+  call dein#add('prabirshrestha/asyncomplete-lsp.vim')
+  call dein#add('mattn/vim-lsp-settings')
   call dein#add('mattn/emmet-vim')
   call dein#add('w0rp/ale')
   call dein#add('rgarver/Kwbd.vim')
   call dein#add('othree/html5.vim')
   call dein#add('nikvdp/ejs-syntax')
+  call dein#add('pangloss/vim-javascript')
   call dein#add('hail2u/vim-css3-syntax')
   call dein#add('plasticboy/vim-markdown')
   call dein#add('elixir-lang/vim-elixir')
@@ -111,6 +116,16 @@ tnoremap <C-S-tab> <C-w>:tabprevious<CR>
 cnoremap <C-f> <Right>
 cnoremap <C-b> <Left>
 
+" Vim-LSP
+let g:lsp_diagnostics_enabled = 0
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
+" debug
+" let g:lsp_log_verbose = 1
+" let g:lsp_log_file = expand('~/vim-lsp.log')
+" let g:asyncomplete_log_file = expand('~/asyncomplete.log')
+
 " Terminal
 noremap <LEADER>tt :terminal++rows=10<CR>
 noremap <LEADER>tc :terminal++curwin<CR>
@@ -132,55 +147,6 @@ noremap <LEADER>fc :<C-u>VimFilerCreate<CR>
 noremap <LEADER>ft :<C-u>VimFilerTab<CR>
 let g:vimfiler_safe_mode_by_default = 0
 let g:vimfiler_as_default_explorer = 1
-
-" neocomplete
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-
-" Define dictionary.
-let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-        \ }
-
-" Define keyword.
-if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
-endif
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-
-" Plugin key-mappings.
-inoremap <expr><C-g>     neocomplete#undo_completion()
-inoremap <expr><C-l>     neocomplete#complete_common_string()
-
-" <CR>: close popup and save indent.
-" inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-" function! s:my_cr_function()
-"   " return neocomplete#close_popup() . "\<CR>"
-"   " For no inserting <CR> key.
-"   " return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-" endfunction
-
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-" <CR>: completion.
-inoremap <expr><CR>   pumvisible() ? "\<C-n>" . neocomplete#close_popup()  : "<CR>"
-
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplete#close_popup()
-inoremap <expr><C-e>  neocomplete#cancel_popup()
-
 
 " Unite
 let g:unite_enable_start_insert = 1
