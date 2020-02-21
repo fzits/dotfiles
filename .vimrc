@@ -23,24 +23,14 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('nikvdp/ejs-syntax')
   call dein#add('hail2u/vim-css3-syntax')
   call dein#add('plasticboy/vim-markdown')
-  call dein#add('groenewege/vim-less')
-  call dein#add('fatih/vim-go')
   call dein#add('elixir-lang/vim-elixir')
-  call dein#add('mxw/vim-jsx')
   call dein#add('inotom/str2htmlentity')
-  "call dein#add('kannokanno/previm')
   call dein#add('will133/vim-dirdiff')
-  call dein#add('altercation/vim-colors-solarized')
-  call dein#add('w0ng/vim-hybrid')
-  call dein#add('crusoexia/vim-monokai')
-  call dein#add('haishanh/night-owl.vim')
-  call dein#add('cocopon/iceberg.vim')
   call dein#add('junegunn/vim-easy-align')
   call dein#add('tpope/vim-surround')
-  call dein#add('tpope/vim-fugitive')
   call dein#add('airblade/vim-gitgutter')
   call dein#add('schickling/vim-bufonly')
-  call dein#add('lisposter/vim-blackboard')
+  call dein#add('haishanh/night-owl.vim')
   call dein#add('vim-jp/vimdoc-ja')
 
   call dein#end()
@@ -236,70 +226,21 @@ let g:ale_linter_aliases = {
             \'xhtml': 'html'
             \}
 
-" Previm
-let g:previm_open_cmd = 'open -a Google\ Chrome'
-
-augroup PrevimSettings
-    autocmd!
-    autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
-augroup END
-
 " Markdown
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_folding_disabled = 1
 
-" Go
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
-au FileType go nmap <Leader>ds <Plug>(go-def-split)
-au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
-au FileType go nmap <Leader>dt <Plug>(go-def-tab)
-au FileType go nmap <Leader>gd <Plug>(go-doc)
-au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
-au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
-au FileType go nmap <Leader>s <Plug>(go-implements)
-au FileType go nmap <Leader>i <Plug>(go-info)
-au FileType go nmap <Leader>e <Plug>(go-rename)
-
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_types = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-
-" JSX
-" let g:jsx_ext_required = 0
-
-"ColorScheme 共通
+"ColorScheme
 if (has("termguicolors"))
  set termguicolors
 endif
 set background=dark
 
-"Hybrid
-"let g:hybrid_custom_term_colors = 1
-"colorscheme hybrid
-"hi CursorLine cterm=none ctermbg=black
-"hi SpecialKey term=underline ctermfg=236
-
-"Night Owl 【注意】 Comment にセットされている cterm=italic を none に上書きしないと
-"背景色が表示されてしまう（たぶんターミナルで使っている Migu 2M に italic がないから）
+"Night Owl 【注意】 ターミナルをイタリックに対応させないと
+"コメント等の cterm=italic が設定されている箇所に背景色が表示されてしまう
+"イタリック対応方法
+"https://weibeld.net/terminals-and-shells/italics.html
 colorscheme night-owl
-hi Comment cterm=none
-hi javaScriptLineComment cterm=none
-hi cssClassName cterm=none
-hi cssPseudoClassId cterm=none
-hi cssIdentifier cterm=none
-hi SpecialKey ctermfg=236 guifg=#363636
-
-"Iceberg
-"colorscheme iceberg
-
-"Monokai
-"colorscheme monokai
 
 "全角スペースのハイライト
 function! IdeographicSpace()
